@@ -13,12 +13,13 @@ namespace Tyuiu.BiryukovAY.Sprint3.Task4.V27.Lib
                 if (x == 0) continue;
 
                 double denominator = Math.Cos(x) + Math.Sin(x);
-                if (Math.Abs(denominator) < 0.000001) continue;
+                if (Math.Abs(denominator) < 0.0000001) continue;
 
-                sum += x / denominator;
+                double y = x / denominator;
+                sum += y;
             }
 
-            return Math.Round(sum, 6);
+            return Math.Round(sum, 3);
         }
     }
 }
