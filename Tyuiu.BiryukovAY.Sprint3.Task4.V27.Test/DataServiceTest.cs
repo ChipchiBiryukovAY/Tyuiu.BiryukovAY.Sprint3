@@ -9,11 +9,12 @@ namespace Tyuiu.BiryukovAY.Sprint3.Task4.V27.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
+            double expected = -44.313;
 
-            double result = ds.Calculate(-5, 5);
+            double actual = ds.Calculate(-5, 5);
 
-            Assert.IsFalse(double.IsNaN(result));
-            Assert.IsFalse(double.IsInfinity(result));
+            double delta = 0.001;
+            Assert.AreEqual(expected, actual, delta);
         }
     }
 }
